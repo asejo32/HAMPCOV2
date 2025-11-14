@@ -64,7 +64,8 @@ $_SESSION['current_admin_page'] = $current_page;
 
     <?php include "navbar.php"; ?>
 
-
+<body class="hampco-admin-sidebar-layout">
+  <main>
 
 
 

@@ -5,6 +5,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <body class="hampco-admin-sidebar-layout">
 <main>
+
+
+<h2 class="text-lg font-semibold text-gray-700 mb-4">MEMBERS LIST</h2>
+
 <h3 class="text-lg font-semibold text-gray-700 mb-4">New Members Verification</h3>
 <table class="table">
   <thead class="thead-dark">
@@ -31,6 +35,7 @@
 
 <!-- Search bar -->
         <div class="mb-4">
+            <h3 class="text-lg font-semibold text-gray-700 mb-4">Find a Member</h3>
             <input type="text" id="searchInput" placeholder="Search members..." 
             style="width: 120vh"
                 class="w-64 p-2 border-green-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
