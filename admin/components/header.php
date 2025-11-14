@@ -52,35 +52,19 @@ $_SESSION['current_admin_page'] = $current_page;
   
 
 </head>
-<body class="bg-gray-100 font-sans antialiased">
+<body>
 
 <input type="text" id="user_id" value="<?=$On_Session[0]['id']?>" hidden>
 
-<?php include "../function/PageSpinner.php"; ?>
 
-
-
-
-
-  <div class="min-h-screen flex flex-col lg:flex-row">
     
-  <!-- Sidebar -->
+
 
 
 
     <?php include "navbar.php"; ?>
 
 
-
-    <!-- Overlay for Mobile Sidebar -->
-    <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden lg:hidden z-40"></div>
-
-    <!-- Main Content -->
-    <main class="flex-1 bg-gray-50 p-8 lg:p-12">
-      <!-- Mobile menu button -->
-      <button id="menuButton" class="lg:hidden text-gray-700 mb-4">
-        <span class="material-icons">menu</span> 
-      </button>
 
 
 

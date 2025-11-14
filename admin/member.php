@@ -3,8 +3,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-
+<body class="hampco-admin-sidebar-layout">
+<main>
 <h3 class="text-lg font-semibold text-gray-700 mb-4">New Members Verification</h3>
 <table class="table">
   <thead class="thead-dark">
@@ -27,41 +27,40 @@
     </tr>
   </tbody>
 </table>
-      
 
 
-
-
-
-<!-- Verified Members Section -->
-<div>
-    <h3 class="text-lg font-semibold text-gray-700 mb-4">Verified Members</h3>
-    <div class="overflow-x-auto w-full bg-white rounded-md shadow-md p-4">
-    <!-- Search bar -->
+<!-- Search bar -->
         <div class="mb-4">
             <input type="text" id="searchInput" placeholder="Search members..." 
             style="width: 120vh"
-                class="w-64 p-2 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+                class="w-64 p-2 border-green-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
         </div>    
-    <table class="min-w-full table-auto" id="verifiedMemberTable">
-            <thead>
-                <tr class="bg-green-100 text-gray-600 uppercase text-sm leading-normal">
-                    <th class="py-3 px-6 text-left">Member ID</th>
-                    <th class="py-3 px-6 text-left">Full Name</th>
-                    <th class="py-3 px-6 text-left">Email</th>
-                    <th class="py-3 px-6 text-left">Phone</th>
-                    <th class="py-3 px-6 text-left">Role</th>
-                    <th class="py-3 px-6 text-left">Sex</th>
-                    <th class="py-3 px-6 text-left">Status</th>
-                    <th class="py-3 px-6 text-left">Actions</th>
-                </tr>
-            </thead>
-            <tbody class="text-gray-600 text-sm">
-                <?php include "backend/end-points/list_verified_members.php";?>
-            </tbody>
-        </table>
-    </div>
-</div>
+<h3 class="text-lg font-semibold text-gray-700 mb-4">Verified Members</h3>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Member ID</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Role</th>
+      <th scope="col">Sex</th>
+      <th scope="col">Status</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <?php include "backend/end-points/list_verified_members.php";?>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+
+
+</main>
+
 
 <!-- Modal Structure -->
 <div id="actionModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden items-center justify-center z-50">
@@ -80,6 +79,7 @@
 </div>
 
 <?php include "components/footer.php";?>
+</body>
 
 <script>
 $(document).ready(function() {

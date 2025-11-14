@@ -3,9 +3,14 @@ require_once "components/header.php";
 ?>
 
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
 
- <link rel="icon" href="../img/logo.png" type="image/x-icon">
+  <link rel="icon" href="../img/logo.png" type="image/x-icon">
   <script type="text/javascript" src="app.js" defer></script>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -38,12 +43,12 @@ require_once "components/header.php";
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="navbar.css">
+
+ 
 </head>
+<body class="hampco-admin-sidebar-layout">
 
-
-
-
-<main>
+  <main>
     <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -285,19 +290,6 @@ require_once "components/header.php";
   </main>
 
 
-
-
-
-
-   
-
-<!-- Include ApexCharts -->
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<!-- Include dashboard JavaScript -->
-<script src="assets/js/dashboard.js"></script>
-
-
-
 <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -315,7 +307,5 @@ require_once "components/header.php";
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
 
-
-<?php
-require_once "components/footer.php";
-?>
+</body>
+</html>

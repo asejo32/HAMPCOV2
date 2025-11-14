@@ -1,7 +1,7 @@
 <?php
 include "components/header.php";
 ?>
-
+<body class="hampco-admin-sidebar-layout">
 <div class="container mx-auto px-4 py-8">
     <div class="flex justify-between items-center mb-6">
         <h1 class="text-2xl font-bold text-gray-800">Order Management</h1>
@@ -96,7 +96,7 @@ include "components/header.php";
         </div>
     </div>
 </div>
-
+</body>
 <script>
 let currentOrderId = null;
 
