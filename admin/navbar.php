@@ -100,3 +100,149 @@
 
 
 <script type="text/javascript" src="app.js" defer></script>
+
+<script>
+        function updateNotifications() {
+            Promise.all([
+                fetch('backend/get_unverified_members.php').then(r => r.json()),
+                fetch('backend/end-points/notifications.php?action=get').then(r => r.json())
+            ])
+            .then(([memberData, notifData]) => {
+                const notificationBell = document.querySelector('button[title="Notifications"]');
+                const notificationDot = notificationBell.querySelector('span');
+                const unverifiedList = document.getElementById('unverifiedMembersList');
+                const hasNotifications = (memberData && memberData.length > 0) || (notifData.notifications && notifData.notifications.length > 0);
+                    
+                    // Update notification dot visibility
+                    notificationDot.classList.toggle('hidden', !hasNotifications);
+                    
+                    // Update member verification notifications
+                    if (memberData && memberData.length > 0) {
+                        unverifiedList.innerHTML = memberData.map(member => `
+                            <li class="p-3 bg-yellow-50 rounded-lg border border-yellow-100">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">${member.member_fullname}</h4>
+                                        <p class="text-sm text-gray-600">Role: ${member.member_role}</p>
+                                        <p class="text-sm text-gray-600">Contact: ${member.member_phone}</p>
+                                    </div>
+                                    <span class="px-2 py-1 bg-yellow-200 text-yellow-800 rounded-full text-xs">Pending</span>
+                                </div>
+                            </li>
+                        `).join('');
+                    } else {
+                        unverifiedList.innerHTML = '<li class="p-3 text-gray-500 text-center">No pending verifications</li>';
+                    }
+
+                    // Update order notifications
+                    const ordersList = document.getElementById('orderNotificationsList');
+                    if (notifData.notifications && notifData.notifications.length > 0) {
+                        ordersList.innerHTML = notifData.notifications.map(notif => `
+                            <li class="p-3 ${notif.is_read ? 'bg-gray-50' : 'bg-blue-50'} rounded-lg border ${notif.is_read ? 'border-gray-100' : 'border-blue-100'}" data-id="${notif.id}">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">${notif.message}</h4>
+                                        <p class="text-sm text-gray-600">${new Date(notif.created_at).toLocaleString()}</p>
+                                    </div>
+                                    ${!notif.is_read ? `
+                                        <button onclick="markNotificationRead(${notif.id})" class="px-2 py-1 text-sm text-blue-600 hover:text-blue-800">
+                                            Mark read
+                                        </button>
+                                    ` : ''}
+                                </div>
+                            </li>
+                        `).join('');
+                    } else {
+                        ordersList.innerHTML = '<li class="p-3 text-gray-500 text-center">No new order notifications</li>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching notifications:', error);
+                });
+        }
+
+        // Initial check for notifications
+        updateNotifications();
+
+        // Check for new notifications every 30 seconds
+        setInterval(updateNotifications, 30000);
+
+        document.querySelector('button[title="Notifications"]').addEventListener('click', function() {
+            document.getElementById('notificationModal').classList.remove('hidden');
+            updateNotifications(); // Refresh notifications when opening modal
+        });
+
+        document.getElementById('closeNotificationModal').addEventListener('click', function() {
+            document.getElementById('notificationModal').classList.add('hidden');
+        });
+
+        // Function to mark a single notification as read
+        function markNotificationRead(notificationId) {
+            fetch('backend/end-points/notifications.php?action=mark-read', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ notification_id: notificationId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    updateNotifications();
+                }
+            })
+            .catch(error => console.error('Error marking notification as read:', error));
+        }
+
+        // Handle mark all as read button
+        document.getElementById('markAllRead').addEventListener('click', function() {
+            fetch('backend/end-points/notifications.php?action=mark-read', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    updateNotifications();
+                    alertify.success('All notifications marked as read');
+                }
+            })
+            .catch(error => console.error('Error marking all notifications as read:', error));
+        });
+
+        // Play notification sound for new orders
+        function playNotificationSound() {
+            const audio = new Audio('../assets/notification.mp3');
+            audio.play().catch(e => console.log('Audio playback prevented:', e));
+        }
+
+        // Check for new notifications and play sound if there are new ones
+        let previousNotificationCount = 0;
+        function checkNewNotifications() {
+            fetch('backend/end-points/notifications.php?action=get')
+                .then(response => response.json())
+                .then(data => {
+                    const currentCount = data.notifications.filter(n => !n.is_read).length;
+                    if (currentCount > previousNotificationCount) {
+                        playNotificationSound();
+                        if (Notification.permission === "granted") {
+                            new Notification("New Order Received", {
+                                body: "You have a new order waiting for review",
+                                icon: "../assets/image/logo.png"
+                            });
+                        }
+                    }
+                    previousNotificationCount = currentCount;
+                });
+        }
+
+        // Request notification permission
+        if ("Notification" in window) {
+            Notification.requestPermission();
+        }
+
+        // Check for new notifications every 30 seconds
+        setInterval(checkNewNotifications, 30000);
+    </script>

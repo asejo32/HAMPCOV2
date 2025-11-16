@@ -1,5 +1,6 @@
 <?php
 require_once "components/header.php";
+
 ?>
 
 
@@ -9,40 +10,6 @@ require_once "components/header.php";
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
-
-  <link rel="icon" href="../img/logo.png" type="image/x-icon">
-  <script type="text/javascript" src="app.js" defer></script>
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="backend/header.min.css" rel="stylesheet">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.css" integrity="sha512-MpdEaY2YQ3EokN6lCD6bnWMl5Gwk7RjBbpKLovlrH6X+DRokrPRAF3zQJl1hZUiLXfo2e9MrOt+udOnHCAmi5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js" integrity="sha512-JnjG+Wt53GspUQXQhc+c4j8SBERsgJAoHeehagKHlxQN+MtCCmFDghX9/AcbkkNRZptyZU4zC8utK59M5L45Iw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <!-- SweetAlert2 CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-
-    <!-- SweetAlert2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
-
-  <link rel="stylesheet" href="navbar.css">
 
  
 </head>
@@ -65,7 +32,7 @@ require_once "components/header.php";
                         <!-- Example: Notification dot -->
                         <span class="absolute top-0 right-0 block h-2 w-2 rounded-full ring-2 ring-white bg-red-500"></span>
                     </button>
-                </div>
+                    </div>
 
                     <!-- Content Row -->
                     <div class="row">
@@ -78,7 +45,7 @@ require_once "components/header.php";
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-uppercase mb-1">
                                                 Total Customers</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php require_once "backend/count_customer.php";?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -96,7 +63,7 @@ require_once "components/header.php";
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-uppercase mb-1">
                                                 Total Members</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php require_once "backend/count_member.php";?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -155,26 +122,71 @@ require_once "components/header.php";
 
                         <!-- Area Chart -->
                         <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
+                            <div class="card shadow mb-4" style="max-height: 415px;">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between bg-success">
                                     <h6 class="m-0 font-weight-bold text-light">Recent Task</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
+   
+                                    
                                 </div>
+                                <div>
+                                    <div class="table-responsive" style="overflow-y: auto; max-height: 350px;">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Task</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>11-15-2025 - 9:00 AM</td>
+                                            <td>HAMPCO!: Pushed Notification</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11-15-2025 - 9:00 AM</td>
+                                            <td>HAMPCO!: Pushed Notification</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11-15-2025 - 9:00 AM</td>
+                                            <td>HAMPCO!: Pushed Notification</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11-15-2025 - 9:00 AM</td>
+                                            <td>HAMPCO!: Pushed Notification</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11-15-2025 - 9:00 AM</td>
+                                            <td>HAMPCO!: Pushed Notification</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11-15-2025 - 9:00 AM</td>
+                                            <td>HAMPCO!: Pushed Notification</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11-15-2025 - 9:00 AM</td>
+                                            <td>HAMPCO!: Pushed Notification</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11-15-2025 - 9:00 AM</td>
+                                            <td>HAMPCO!: Pushed Notification</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11-15-2025 - 9:00 AM</td>
+                                            <td>HAMPCO!: Pushed Notification</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11-15-2025 - 9:00 AM</td>
+                                            <td>HAMPCO!: Pushed Notification</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                        </div>
+
+                                </div>
+
+
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
@@ -183,6 +195,7 @@ require_once "components/header.php";
                                 </div>
                             </div>
                         </div>
+                        
 
                         <!-- Pie Chart -->
                         <div class="col-xl-4 col-lg-5">
@@ -190,7 +203,7 @@ require_once "components/header.php";
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between bg-success">
-                                    <h6 class="m-0 font-weight-bold text-light">Revenue Sources</h6>
+                                    <h6 class="m-0 font-weight-bold text-light">Member Distributions</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -213,13 +226,13 @@ require_once "components/header.php";
                                     </div>
                                     <div class="mt-4 text-center small">
                                         <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
+                                            <i class="fas fa-circle text-primary"></i> Weavers
                                         </span>
                                         <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
+                                            <i class="fas fa-circle text-success"></i> Knotters
                                         </span>
                                         <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
+                                            <i class="fas fa-circle text-info"></i> Warpers
                                         </span>
                                     </div>
                                 </div>
@@ -306,6 +319,8 @@ require_once "components/header.php";
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+
+    
 
 </body>
 </html>

@@ -1,8 +1,8 @@
 <?php
+require_once dirname(dirname(__DIR__)) . '/function/config.php';
 include('backend/class.php');
 $db = new global_class();
 
-session_start();
 $is_logged_in = isset($_SESSION['customer_id']);
 if (isset($_SESSION['customer_id'])) {
   $customer_id = intval($_SESSION['customer_id']); 

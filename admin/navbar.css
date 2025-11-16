@@ -11,6 +11,7 @@
 *{
   margin: 0;
   padding: 0;
+
 }
 html.hampco-admin-sidebar-layout-page,
 html:has(.hampco-admin-sidebar-layout){
@@ -34,6 +35,7 @@ html{
   z-index: 1000;
   font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5rem;
+
 }
 
 /* Reset all Bootstrap styles within sidebar isolation */

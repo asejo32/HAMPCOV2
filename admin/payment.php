@@ -1,8 +1,7 @@
 <?php
 require_once "components/header.php";
 ?>
-<div style="width: 100vw">
-<div class="container mx-auto px-4 py-8">
+
     <h1 class="text-3xl font-bold text-gray-800 mb-8">Payment Management</h1>
 
     <!-- Search and Filter Section -->
@@ -121,8 +120,7 @@ require_once "components/header.php";
             </table>
         </div>
     </div>
-</div>
-</div>
+
 
 <!-- Include SweetAlert2 for better alerts -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

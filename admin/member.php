@@ -5,7 +5,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <body class="hampco-admin-sidebar-layout">
 <main>
-
+<div class="table-responsive" style="width:160vh;">
 
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Manage Members</h1>
@@ -22,7 +22,8 @@
                     </div>
 
 <h3 class="text-lg font-semibold text-gray-700 mb-4">New Members Verification</h3>
-<table class="table">
+<div class="table-responsive">
+<table class="table" >
   <thead class="thead-dark">
     <tr>
       <th scope="col">Member ID</th>
@@ -43,6 +44,8 @@
     </tr>
   </tbody>
 </table>
+</div>
+
 
 
 <!-- Search bar -->
@@ -52,29 +55,29 @@
             style="width: 120vh"
                 class="w-64 p-2 border-green-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
         </div>    
-<h3 class="text-lg font-semibold text-gray-700 mb-4">Verified Members</h3>
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Member ID</th>
-      <th scope="col">Full Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Role</th>
-      <th scope="col">Sex</th>
-      <th scope="col">Status</th>
-      <th scope="col">Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <?php include "backend/end-points/list_verified_members.php";?>
-    </tr>
-    <tr>
-    </tr>
-  </tbody>
-</table>
-
+        <h3 class="text-lg font-semibold text-gray-700 mb-4">Verified Members</h3>
+        <table class="table">
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">Member ID</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Role</th>
+            <th scope="col">Sex</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <?php include "backend/end-points/list_verified_members.php";?>
+            </tr>
+            <tr>
+            </tr>
+        </tbody>
+        </table>
+        </div>
 
 </main>
 

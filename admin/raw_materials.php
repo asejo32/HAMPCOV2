@@ -1,11 +1,5 @@
 <?php include "components/header.php";?>
 
-<!-- Top bar with user profile -->
-<div class="flex justify-between items-center bg-white p-4 mb-6 rounded-md shadow-md">
-    <h2 class="text-lg font-semibold text-gray-700">Inventory</h2>
-    <div class="w-10 h-10 ">
-    </div>
-</div>
 
 <!-- Raw Materials Label -->
 <div class="mb-4">
