@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mobile-Centered Logo Navbar</title>
+  <title>HAMPCO || CUSTOMER</title>
   <script src="https://cdn.tailwindcss.com"></script>
   
   <style>
