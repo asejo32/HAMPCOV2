@@ -45,6 +45,7 @@
        
         </li>
        <div>
+        <span class="logo">
           <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
           <div class="flex items-center px-6 py-4">
             <img class="w-16 h-16 object-cover rounded-full border-2 border-indigo-500" src="https://via.placeholder.com/150" alt="Profile Picture">
@@ -62,6 +63,8 @@
             <span>🛠 Node.js · C++ · Tailwind</span>
             <span>📍 Kalibo, Philippines</span>
           </div>
+        </div>
+        </span>
         </div>
 
       
