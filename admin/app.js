@@ -16,6 +16,7 @@ function toggleSidebar(){
   }
 }
 
+
 function toggleSubMenu(button){
 
   if(!button.nextElementSibling.classList.contains('show')){
@@ -35,5 +36,6 @@ function closeAllSubMenus(){
   Array.from(sidebar.getElementsByClassName('show')).forEach(ul => {
     ul.classList.remove('show')
     ul.previousElementSibling.classList.remove('rotate')
+
   })
 }

@@ -30,7 +30,22 @@
 <script src="assets/js/app.js"></script>>
 
 
+<!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
 
 
 <script>
@@ -60,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.getElementById('overlay');
     const sidebar = document.getElementById('sidebar');
     const toggleBtn = document.getElementById('toggleSidebar');
+    const pc = document.getElementById('profcard');
     
     if (overlay && sidebar && toggleBtn) {
         // Toggle sidebar
@@ -72,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.addEventListener('click', function() {
             sidebar.classList.add('-translate-x-full');
             overlay.classList.add('hidden');
+            pc.remove();
         });
     }
 });
