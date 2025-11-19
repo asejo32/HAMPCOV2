@@ -88,7 +88,7 @@ require_once "components/header.php";
 
                         <!-- Area Chart -->
                         <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4" style="max-height: 415px;">
+                            <div class="card shadow mb-4" style="max-height: 347px;">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between bg-success">
@@ -97,7 +97,7 @@ require_once "components/header.php";
                                     
                                 </div>
                                 <div>
-                                    <div class="table-responsive" style="overflow-y: auto; max-height: 350px;">
+                                    <div class="table-responsive" style="overflow-y: auto; max-height: 290px;">
                                     <table class="table">
                                         <thead>
                                         <tr>
@@ -107,6 +107,31 @@ require_once "components/header.php";
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        <tr>
+                                            <td>No Record</td>
+                                            <td>HAMPCO!: Unknown</td>
+                                            <td>Undefined</td>
+                                        </tr>
+                                        <tr>
+                                            <td>No Record</td>
+                                            <td>HAMPCO!: Unknown</td>
+                                            <td>Undefined</td>
+                                        </tr>
+                                        <tr>
+                                            <td>No Record</td>
+                                            <td>HAMPCO!: Unknown</td>
+                                            <td>Undefined</td>
+                                        </tr>
+                                        <tr>
+                                            <td>No Record</td>
+                                            <td>HAMPCO!: Unknown</td>
+                                            <td>Undefined</td>
+                                        </tr>
+                                        <tr>
+                                            <td>No Record</td>
+                                            <td>HAMPCO!: Unknown</td>
+                                            <td>Undefined</td>
+                                        </tr>
                                         <tr>
                                             <td>No Record</td>
                                             <td>HAMPCO!: Unknown</td>
