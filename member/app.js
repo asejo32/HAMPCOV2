@@ -36,9 +36,13 @@ function closeAllSubMenus() {
     ul.previousElementSibling.classList.remove('rotate');
   });
 
-  // Safely remove #profcard if it exists
   const element = document.getElementById("profcard");
+
   if (element) {
-    element.remove();
+    if (sidebar.classList.contains('close')) {
+      element.classList.add('hidden'); // Tailwind or CSS-based hiding
+    } else {
+      element.classList.remove('hidden');
+    }
   }
 }

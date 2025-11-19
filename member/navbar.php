@@ -51,8 +51,8 @@
           <div class="flex items-center px-6 py-4">
             <img class="w-16 h-16 object-cover rounded-full border-2 border-indigo-500" src="https://via.placeholder.com/150" alt="Profile Picture">
             <div class="ml-4">
-              <h2 class="text-xl font-semibold text-gray-800">Jefferson Dela Cruz</h2>
-              <p class="text-sm text-gray-600">Campus Tech Lead · Kalibo, PH</p>
+              <h2 class="text-xl font-semibold text-gray-800">HELLO MEMBER!</h2>
+              <p class="text-sm text-gray-600">ROLE:</p>
             </div>
           </div>
           <div class="px-6 py-4 border-t border-gray-100">
@@ -97,6 +97,7 @@
     </ul>
   </nav>
 </div>
+
 
 
 <script type="text/javascript" src="app.js" defer></script>

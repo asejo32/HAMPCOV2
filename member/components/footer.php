@@ -5,16 +5,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <!-- Include SweetAlert CDN -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -88,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.addEventListener('click', function() {
             sidebar.classList.add('-translate-x-full');
             overlay.classList.add('hidden');
-            pc.remove();
+            
         });
     }
 });
