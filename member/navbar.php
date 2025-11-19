@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.css" integrity="sha512-MpdEaY2YQ3EokN6lCD6bnWMl5Gwk7RjBbpKLovlrH6X+DRokrPRAF3zQJl1hZUiLXfo2e9MrOt+udOnHCAmi5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js" integrity="sha512-JnjG+Wt53GspUQXQhc+c4j8SBERsgJAoHeehagKHlxQN+MtCCmFDghX9/AcbkkNRZptyZU4zC8utK59M5L45Iw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  
     <!-- SweetAlert2 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
@@ -41,20 +41,24 @@
         <span class="logo"><img src="../img/logo.png" alt="HAMPCO" class="navbar-logo" style="height: 30px; width: auto;"></span>
         
         <button onclick=toggleSidebar() id="toggle-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8ede9ff"><path d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z"/></svg>
         </button>
        
         </li>
        <div id="profcard" style="margin-bottom: 20px;">
+
+
+       
       
-          <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
-          <div class="flex items-center px-6 py-4">
-            <img class="w-16 h-16 object-cover rounded-full border-2 border-indigo-500" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile Picture">
+          <div class="max-w-sm mx-auto shadow-lg rounded-lg overflow-hidden border border-gray-200" style="background-color: #b0e6afff;">
+          <div class="flex items-center px-1 py-4">
             <div class="ml-4">
               <h2 class="font-semibold text-gray-800">
               <span class="fluid-name"><?= ucfirst($On_Session[0]['fullname']) ?></span></h2>
               <p class="text-sm text-gray-600">ROLE: <?= ucfirst($On_Session[0]['role']) ?></p>
             </div>
+            <img class="ml-2 w-16 h-16 object-cover rounded-full border-2 border-indigo-500" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile Picture">
+            
           </div>
         </div>
         </div>

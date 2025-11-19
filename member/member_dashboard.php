@@ -10,7 +10,7 @@ require_once "components/header.php";
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">DATA BASE NOT YET Initialize  </h1>
+                        <h1 class="h3 mb-0 text-gray-800">DASHBOARD  </h1>
                         <i class="fa-solid fa-cart-plus"></i>
                         <!-- Notification Bell Icon -->
                     <button class="relative focus:outline-none" title="Notifications">
@@ -27,13 +27,13 @@ require_once "components/header.php";
                     <div class="row">
 
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-4 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-uppercase mb-1">
-                                                Total Customers</div>
+                                                Pending Tasks</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                                         </div>
                                         <div class="col-auto">
@@ -45,13 +45,13 @@ require_once "components/header.php";
                         </div>
 
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-4 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-uppercase mb-1">
-                                                Total Members</div>
+                                                In Progress</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                                         </div>
                                         <div class="col-auto">
@@ -62,37 +62,14 @@ require_once "components/header.php";
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-uppercase mb-1">Production Items
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">0</div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-4 col-md-12 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-uppercase mb-1">
-                                                Active Tasks</div>
+                                                Completed Tasks</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                                         </div>
                                         <div class="col-auto">
@@ -124,51 +101,19 @@ require_once "components/header.php";
                                     <table class="table">
                                         <thead>
                                         <tr>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Task</th>
+                                            <th scope="col">Product</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Deadline</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td>11-15-2025 - 9:00 AM</td>
-                                            <td>HAMPCO!: Pushed Notification</td>
+                                            <td>No Record</td>
+                                            <td>HAMPCO!: Unknown</td>
+                                            <td>Undefined</td>
                                         </tr>
-                                        <tr>
-                                            <td>11-15-2025 - 9:00 AM</td>
-                                            <td>HAMPCO!: Pushed Notification</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11-15-2025 - 9:00 AM</td>
-                                            <td>HAMPCO!: Pushed Notification</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11-15-2025 - 9:00 AM</td>
-                                            <td>HAMPCO!: Pushed Notification</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11-15-2025 - 9:00 AM</td>
-                                            <td>HAMPCO!: Pushed Notification</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11-15-2025 - 9:00 AM</td>
-                                            <td>HAMPCO!: Pushed Notification</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11-15-2025 - 9:00 AM</td>
-                                            <td>HAMPCO!: Pushed Notification</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11-15-2025 - 9:00 AM</td>
-                                            <td>HAMPCO!: Pushed Notification</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11-15-2025 - 9:00 AM</td>
-                                            <td>HAMPCO!: Pushed Notification</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11-15-2025 - 9:00 AM</td>
-                                            <td>HAMPCO!: Pushed Notification</td>
-                                        </tr>
+
+
                                         </tbody>
                                     </table>
                         </div>
@@ -188,7 +133,7 @@ require_once "components/header.php";
 
                         <!-- Pie Chart -->
                         <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
+                            <div class="card shadow mb-4" >
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between bg-success">
@@ -209,38 +154,7 @@ require_once "components/header.php";
                                     </div>
                                 </div>
                                 <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Weavers
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Knotters
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Warpers
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Project Card Example -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3 bg-success">
-                                    <h6 class="m-0 font-weight-bold text-light">Projects</h6>
-                                </div>
-                                <div class="card-body">
+                                <div class="card-body" style="max-height: 415px;">
                                     <h4 class="small font-weight-bold">Server Migration <span
                                             class="float-right">20%</span></h4>
                                     <div class="progress mb-4">
@@ -271,6 +185,24 @@ require_once "components/header.php";
                                         <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
                                             aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Content Column -->
+                        <div class="col-lg-12 mb-4">
+
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 bg-success">
+                                    <h6 class="m-0 font-weight-bold text-light">Current Task Details</h6>
+                                </div>
+                                <div class="card-body">
+                                    <h1>NO TASK DETAILS</h1>
                                 </div>
                             </div>
 
