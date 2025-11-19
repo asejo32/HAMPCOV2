@@ -45,24 +45,16 @@
         </button>
        
         </li>
-       <div id="profcard">
+       <div id="profcard" style="margin-bottom: 20px;">
       
           <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
           <div class="flex items-center px-6 py-4">
-            <img class="w-16 h-16 object-cover rounded-full border-2 border-indigo-500" src="https://via.placeholder.com/150" alt="Profile Picture">
+            <img class="w-16 h-16 object-cover rounded-full border-2 border-indigo-500" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile Picture">
             <div class="ml-4">
-              <h2 class="text-xl font-semibold text-gray-800">HELLO MEMBER!</h2>
-              <p class="text-sm text-gray-600">ROLE:</p>
+              <h2 class="font-semibold text-gray-800">
+              <span class="fluid-name"><?= ucfirst($On_Session[0]['fullname']) ?></span></h2>
+              <p class="text-sm text-gray-600">ROLE: <?= ucfirst($On_Session[0]['role']) ?></p>
             </div>
-          </div>
-          <div class="px-6 py-4 border-t border-gray-100">
-            <p class="text-gray-700 text-sm">
-              Focused on offline AI deployments, kiosk automation, and scalable campus dashboards. Passionate about bridging tech and community.
-            </p>
-          </div>
-          <div class="px-6 py-4 border-t border-gray-100 flex justify-between text-sm text-gray-500">
-            <span>🛠 Node.js · C++ · Tailwind</span>
-            <span>📍 Kalibo, Philippines</span>
           </div>
         </div>
         </div>

@@ -405,6 +405,15 @@ th, td {
     overflow-x: auto;
     width: fit-content;
   }
+  .fluid-name {
+  display: block;
+  width: 100%;
+  font-size: clamp(0.75rem, 5vw, 1.5rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
 }
 
 

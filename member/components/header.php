@@ -7,7 +7,7 @@ $db = new Database();
 // Check if user is logged in and is a member
 if (!isset($_SESSION['id']) || !isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'member') {
     session_destroy();
-    header('location: ../login_member.php');
+    header('location: ../login.php');
     exit();
 }
 
@@ -17,7 +17,7 @@ $On_Session = $db->check_account($id, 'member');
 
 if (empty($On_Session)) {
     session_destroy();
-    header('location: ../login_member.php');
+    header('location: ../login.php');
     exit();
 }
 
@@ -57,7 +57,7 @@ $_SESSION['current_member_page'] = $current_page;
 
   <!-- SweetAlert2 JS -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+  <link rel="stylesheet" href="header.min.css">
   
 </head>
 
