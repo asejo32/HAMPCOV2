@@ -52,20 +52,13 @@ $_SESSION['current_admin_page'] = $current_page;
   
 
 </head>
-<body>
+<body class="hampco-admin-sidebar-layout">
 
 <input type="text" id="user_id" value="<?=$On_Session[0]['id']?>" hidden>
 
+<?php include "navbar.php"; ?>
 
-    
-
-
-
-
-    <?php include "navbar.php"; ?>
-
-<body class="hampco-admin-sidebar-layout">
-  <main>
+<main>
 
 
 

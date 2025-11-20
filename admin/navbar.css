@@ -106,6 +106,8 @@ html{
   overflow: hidden !important;
   text-wrap: nowrap !important;
   flex-shrink: 0 !important;
+  display: block !important;
+  visibility: visible !important;
 }
 .hampco-sidebar-isolation #sidebar.close{
   padding: 5px !important;
@@ -314,14 +316,29 @@ html{
 @media(max-width: 800px){
   .hampco-admin-sidebar-layout{
     grid-template-columns: 1fr !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
+  
   .hampco-admin-sidebar-layout main{
-    padding: 2em 1em 60px 1em !important;
+    padding: 2em 1em 80px 1em !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+    flex: 1 !important;
+    order: 0 !important;
   }
+  
   .hampco-admin-sidebar-layout .container{
     border: none !important;
     padding: 0 !important;
   }
+  
+  /* Hide the toggle button on mobile */
+  #toggle-btn {
+    display: none !important;
+  }
+  
   .hampco-sidebar-isolation #sidebar{
     height: 60px !important;
     width: 100% !important;
@@ -331,58 +348,113 @@ html{
     position: fixed !important;
     top: unset !important;
     bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    background-color: var(--base-clr) !important;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1) !important;
+    overflow: visible !important;
+    display: block !important;
+    visibility: visible !important;
+    flex-shrink: 0 !important;
+    order: 1 !important;
+  }
+  
+  /* Remove close state effects on mobile */
+  .hampco-sidebar-isolation #sidebar.close {
+    width: 100% !important;
+    height: 60px !important;
+    padding: 0 !important;
+  }
+  
+  .hampco-sidebar-isolation #sidebar.close a span,
+  .hampco-sidebar-isolation #sidebar.close .dropdown-btn span,
+  .hampco-sidebar-isolation #sidebar.close .logo {
+    display: none !important;
+  }
 
-    > ul{
-      padding: 0;
-      display: grid;
-      grid-auto-columns: 60px;
-      grid-auto-flow: column;
-      align-items: center;
-      overflow-x: scroll;
-    }
-    ul li{
-      height: 100%;
-    }
-    ul a, ul .dropdown-btn{
-      width: 60px;
-      height: 60px;
-      padding: 0;
-      border-radius: 0;
-      justify-content: center;
+  .hampco-sidebar-isolation #sidebar ul{
+    padding: 0 !important;
+    display: grid !important;
+    grid-auto-columns: 60px !important;
+    grid-auto-flow: column !important;
+    align-items: stretch !important;
+    overflow-x: auto !important;
+    height: 60px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    gap: 0 !important;
+  }
+  
+  .hampco-sidebar-isolation #sidebar ul li{
+    height: 60px !important;
+    width: 60px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .hampco-sidebar-isolation #sidebar ul a, 
+  .hampco-sidebar-isolation #sidebar ul .dropdown-btn{
+    width: 60px !important;
+    height: 60px !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    justify-content: center !important;
+    display: flex !important;
+    align-items: center !important;
+    color: var(--text-clr) !important;
+    cursor: pointer !important;
+    gap: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .hampco-sidebar-isolation #sidebar ul li span, 
+  .hampco-sidebar-isolation #sidebar ul li:first-child, 
+  .hampco-sidebar-isolation #sidebar .dropdown-btn span,
+  .hampco-sidebar-isolation #sidebar .dropdown-btn svg:last-child{
+    display: none !important;
+  }
+
+    .hampco-sidebar-isolation #sidebar ul li .sub-menu.show{
+      position: fixed !important;
+      bottom: 60px !important;
+      left: 0 !important;
+      right: 0 !important;
+      box-sizing: border-box !important;
+      height: 60px !important;
+      width: 100% !important;
+      background-color: var(--hover-clr) !important;
+      border-top: 1px solid var(--line-clr) !important;
+      display: flex !important;
+      justify-content: center !important;
+      z-index: 9998 !important;
+      grid-template-rows: 1fr !important;
     }
 
-    ul li span, ul li:first-child, .dropdown-btn svg:last-child{
-      display: none;
+    .hampco-sidebar-isolation #sidebar ul li .sub-menu.show > div{
+      overflow-x: auto !important;
+      display: flex !important;
+      align-items: center !important;
     }
-
-    ul li .sub-menu.show{
-      position: fixed;
-      bottom: 60px;
-      left: 0;
-      box-sizing: border-box;
-      height: 60px;
-      width: 100%;
-      background-color: var(--hover-clr);
-      border-top: 1px solid var(--line-clr);
-      display: flex;
-      justify-content: center;
-
-      > div{
-        overflow-x: auto;
-      }
-      li{
-        display: inline-flex;
-      }
-      a{
-        box-sizing: border-box;
-        padding: 1em;
-        width: auto;
-        justify-content: center;
-      }
+    
+    .hampco-sidebar-isolation #sidebar ul li .sub-menu.show li{
+      display: inline-flex !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    .hampco-sidebar-isolation #sidebar ul li .sub-menu.show a{
+      box-sizing: border-box !important;
+      padding: 1em !important;
+      width: auto !important;
+      justify-content: center !important;
+      display: flex !important;
+      align-items: center !important;
+      height: 60px !important;
+      color: white !important;
+      gap: 0 !important;
     }
   }
-}
-
 
 
 
